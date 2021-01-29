@@ -8,6 +8,18 @@
     <title>Document</title>
   </head>
   <body>
-    <button id="submitButton">Submit</button>
+    <form class="form" action="/action_page.php">
+      <input placeholder="first Name" type="text" id="fname" name="fname" />
+      <input placeholder="last name" type="text" id="lname" name="lname" />
+      <input placeholder="ID Number" type="text" id="idNum" name="idNum" />
+      <input
+        placeholder="job title"
+        type="text"
+        id="jobTitle"
+        name="jobTitle"
+      />
+      <input placeholder="annual salary" type="text" id="anSal" name="anSal" />
+    </form>
+    <button onclick="collector()">Submit</button>
   </body>
 </html>
