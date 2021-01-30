@@ -13,3 +13,4 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 []watch lecture/notes
 []how to add more indexes to array
 [] add up all object.key(annualSalary)
+[x]change ul to table

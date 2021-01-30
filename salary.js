@@ -69,5 +69,6 @@ function collector() {
       }
       console.log(totalSalary);
     }
+    return inputTotal;
   }
 }
