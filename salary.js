@@ -3,9 +3,25 @@ $(document).ready(starter);
 function starter() {
   $('#submitButton').on('click', collector);
 }
+let inputTotal = [];
+let totalCost = [];
+
 function collector() {
   //event.preventDefault();
-  let inputTotal = [];
+
+  let lastName = $('#lname').val();
+  let firstName = $('#fname').val();
+  let employeeID = $('#idNum').val();
+  let jobTitle = $('#jobTitle').val();
+  let annualSal = $('#anSal').val();
+  const inputField = {
+    // creating object for input.val() to be stored in
+    firstName: firstName,
+    lastName: lastName,
+    employeeID: Number(employeeID),
+    jobTitle: jobTitle,
+    annualSal: Number(annualSal),
+  };
   if (
     //if any fields are empty give alert
     !$('#fname').val() ||
@@ -27,20 +43,6 @@ function collector() {
     // run when if statement not true
 
     console.log('in collector');
-    let lastName = $('#lname').val();
-    let firstName = $('#fname').val();
-    let employeeID = $('#idNum').val();
-    let jobTitle = $('#jobTitle').val();
-    let annualSal = $('#anSal').val();
-
-    const inputField = {
-      // creating object for input.val() to be stored in
-      firstName: firstName,
-      lastName: lastName,
-      employeeID: Number(employeeID),
-      jobTitle: jobTitle,
-      annualSal: Number(annualSal),
-    };
 
     let clearData = [
       $('#fname').val(''),
@@ -59,16 +61,22 @@ function collector() {
   <th> Employee ID: ${employeeID}</th>
   <th> Job Title: ${jobTitle}</th>
   <th> Annual Salary: ${annualSal}</th>
+  <th> Monthly Salary: ${totalCost}
+  <th> <button id="deleteButt"></button></th>
   </tr>
   `);
-
-    function monthlyCost() {
-      let totalSalary = [];
-      for (annualSal in inputTotal) {
-        totalSalary += inputTotal[annualSal];
-      }
-      console.log(totalSalary);
-    }
-    return inputTotal;
   }
+  monthlyCost();
 }
+
+//function deleteButt() {
+//$(this).on('click');
+//}
+
+function monthlyCost() {
+  for (annualSal in inputTotal) {
+    totalCost.push(inputTotal['annualSal']);
+  }
+  console.log(totalCost);
+  return totalCost;
+} //trying to total annual salary
