@@ -65,18 +65,21 @@ function collector() {
   <th> <button id="deleteButt"></button></th>
   </tr>
   `);
+    monthly();
+    //console.log(inputTotal[i] + inputTotal[i]);
   }
-  monthlyCost();
 }
 
 //function deleteButt() {
 //$(this).on('click');
 //}
+let cost = [];
 
-function monthlyCost() {
-  for (annualSal in inputTotal) {
-    totalCost.push(inputTotal['annualSal']);
+function monthly() {
+  for (let x of inputTotal) {
+    console.log(x.annualSal);
+    cost.push(x.annualSal);
+    console.log(cost);
   }
-  console.log(totalCost);
-  return totalCost;
-} //trying to total annual salary
+  return cost;
+}
