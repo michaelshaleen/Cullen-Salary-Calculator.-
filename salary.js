@@ -6,49 +6,54 @@ function starter() {
 function collector() {
   //event.preventDefault();
   let inputTotal = [];
-  console.log('in collector');
-  let lastName = $('#lname').val();
-  let firstName = $('#fname').val();
-  let employeeID = $('#idNum').val();
-  let jobTitle = $('#jobTitle').val();
-  let annualSal = $('#anSal').val();
+  if (
+    //if any fields are empty give alert
+    !$('#fname').val() ||
+    !$('#lname').val() ||
+    !$('#idNum').val() ||
+    !$('#jobTitle').val() ||
+    !$('#anSal').val()
+  ) {
+    let clearData = [
+      //clear inputs
+      $('#fname').val(''),
+      $('#lname').val(''),
+      $('#idNum').val(''),
+      $('#jobTitle').val(''),
+      $('#anSal').val(''),
+    ];
+    alert('you forgot something'); //alert if any field isn't filled
+  } else {
+    // run when if statement not true
 
-  const inputField = {
-    // creating object for input.val() to be stored in
-    firstName: firstName,
-    lastName: lastName,
-    employeeID: employeeID,
-    jobTitle: jobTitle,
-    annualSal: Number(annualSal),
-  };
+    console.log('in collector');
+    let lastName = $('#lname').val();
+    let firstName = $('#fname').val();
+    let employeeID = $('#idNum').val();
+    let jobTitle = $('#jobTitle').val();
+    let annualSal = $('#anSal').val();
 
-  inputTotal.push(inputField); // push the object outline into inputTotal
-  //used newCar for reference
-  //const newCarObject = {
-  //creating format for info to go so it's organized
-  //year: yearInput,
-  //make: makeInput,
-  //model: modelInput,
-  //price: priceInput,
-  //};
-  //garage.push(newCarObject);
+    const inputField = {
+      // creating object for input.val() to be stored in
+      firstName: firstName,
+      lastName: lastName,
+      employeeID: employeeID,
+      jobTitle: jobTitle,
+      annualSal: Number(annualSal),
+    };
 
-  //Obj.arrayOne.push(arraynew
-  //let inputTotal = [
-  //$('#fname').val() +
-  //$('#lname').val() +
-  //$('#jobTitle').val() +
-  //$('#anSal').val(),
-  //];
-  //inputField.lastName.push(inputTotal);
+    inputTotal.push(inputField); // push the object outline into inputTotal
 
-  //inputField.firstName.push(fname); no go
-  //inputField; // says cannot .push() ugh!!!!
-  //if (annualSal !== Number) {
-  //alert('Whoops, looking for a number there');
-  //} else {
-  console.log(inputTotal);
-  $('#ul').append(`
+    console.log(inputTotal);
+    let clearData = [
+      $('#fname').val(''),
+      $('#lname').val(''),
+      $('#idNum').val(''),
+      $('#jobTitle').val(''),
+      $('#anSal').val(''),
+    ];
+
+    $('#ul').append(`
   <li>
   first name: ${firstName}
   </li>
@@ -62,26 +67,13 @@ function collector() {
   Annual Salary: ${annualSal}
   </li>
   `);
-  //monthlyCost();
-  //}
-  //$('.form');
-} //clean up later
-//for (const key in user) {
-//console.log(`${key}: ${user[key]}`);
-//}
-//return true;
 
-//let employeeGroup= {
-//employeeFirstName: 'Dan',
-//lastName: 'Danson',
-//idNumber: 4,
-//jobTitle: 'Toilet Guy',
-//annualSalary: '40,000',
-//};
-
-function monthlyCost() {
-  let totalSalary = [];
-  for (i = 0; i < array.length; i++) {
-    totalSalary += inputTotal.annualSal;
+    function monthlyCost() {
+      let totalSalary = [];
+      for (annualSal in inputTotal) {
+        totalSalary += inputTotal[annualSal];
+      }
+      console.log(totalSalary);
+    }
   }
 }
