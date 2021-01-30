@@ -7,22 +7,35 @@ let employeeInfo = {
   jobTitle: '',
   annualSalary: Number(''),
 };
+let inputField = {
+  firstName: '',
+  lastName: '',
+  idNum: '',
+  jobTitle: '',
+  annualSal: '',
+};
 
 function collector() {
-  let inputField = [
+  let goal = [
     $('#fname').val() +
       $('#lname').val() +
-      $('#idNum').val() +
       $('#jobTitle').val() +
       $('#anSal').val(),
   ];
+
+  let lname = $('#lname').val();
+  let fname = $('#fname').val();
+
+  //inputField; // says cannot .push() ugh!!!!
+  console.log(goal);
   $('#ul').append(`
   <li>
-  info
-  </li> 
-  console.log('yo');
+  first name: ${fname} 
+  </li>
+  <li>
+  Last Name: ${lname}`);
   //$('.form');
-}
+} //clean up later
 //for (const key in user) {
 //console.log(`${key}: ${user[key]}`);
 //}
