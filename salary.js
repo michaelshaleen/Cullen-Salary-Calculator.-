@@ -37,14 +37,11 @@ function collector() {
       // creating object for input.val() to be stored in
       firstName: firstName,
       lastName: lastName,
-      employeeID: employeeID,
+      employeeID: Number(employeeID),
       jobTitle: jobTitle,
       annualSal: Number(annualSal),
     };
 
-    inputTotal.push(inputField); // push the object outline into inputTotal
-
-    console.log(inputTotal);
     let clearData = [
       $('#fname').val(''),
       $('#lname').val(''),
@@ -52,20 +49,17 @@ function collector() {
       $('#jobTitle').val(''),
       $('#anSal').val(''),
     ];
+    inputTotal.push(inputField); // push the object outline into inputTotal
+    console.log(inputTotal);
 
-    $('#ul').append(`
-  <li>
-  first name: ${firstName}
-  </li>
-  <li>
-  Last Name: ${lastName}
-  <li>
-  Employee ID: ${employeeID}
-  </li><li>
-  Job Title: ${jobTitle}
-  </li><li>
-  Annual Salary: ${annualSal}
-  </li>
+    $('#table').append(`
+  <tr>
+   <th> first name: ${firstName}</th>
+  <th> Last Name: ${lastName}</th>
+  <th> Employee ID: ${employeeID}</th>
+  <th> Job Title: ${jobTitle}</th>
+  <th> Annual Salary: ${annualSal}</th>
+  </tr>
   `);
 
     function monthlyCost() {
