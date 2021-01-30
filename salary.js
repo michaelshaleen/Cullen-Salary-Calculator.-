@@ -4,7 +4,7 @@ function starter() {
   $('#submitButton').on('click', collector);
 }
 let inputTotal = [];
-let totalCost = [];
+let total = 0;
 
 function collector() {
   //event.preventDefault();
@@ -53,6 +53,7 @@ function collector() {
     ];
     inputTotal.push(inputField); // push the object outline into inputTotal
     console.log(inputTotal);
+    monthlyCost();
 
     $('#table').append(`
   <tr>
@@ -61,11 +62,9 @@ function collector() {
   <th> Employee ID: ${employeeID}</th>
   <th> Job Title: ${jobTitle}</th>
   <th> Annual Salary: ${annualSal}</th>
-  <th> Monthly Salary: ${totalCost}
-  <th> <button id="deleteButt"></button></th>
-  </tr>
+  <th> Total Cost: ${total}</tr>
   `);
-    monthly();
+
     //console.log(inputTotal[i] + inputTotal[i]);
   }
 }
@@ -73,13 +72,12 @@ function collector() {
 //function deleteButt() {
 //$(this).on('click');
 //}
-let cost = [];
 
-function monthly() {
-  for (let x of inputTotal) {
-    console.log(x.annualSal);
-    cost.push(x.annualSal);
-    console.log(cost);
+function monthlyCost() {
+  for (var i = 0; i < inputTotal.length; i++) {
+    total += inputTotal[i].annualSal;
+    console.log(total);
   }
-  return cost;
+  return total;
 }
+//so far the best I can get
