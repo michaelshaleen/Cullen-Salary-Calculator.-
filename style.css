@@ -7,3 +7,7 @@ tr {
 #div {
   width: fit-content;
 }
+
+th {
+  word-spacing: 50px;
+}

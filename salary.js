@@ -52,12 +52,13 @@ function addEmployee() {
       $('#jobTitle').val(''),
       $('#annualSal').val(''),
     ];
-    $('#div').append(`
-     <tr>${firstName}</tr>
-    <tr>${lastName}</tr>
-    <tr>${employeeID}</tr>
-    <tr>${jobTitle}</tr>
-    <tr>${annualSal}</tr>
+    $('#monthly').append(`
+    ${firstName}
+    ${lastName}
+    ${employeeID}
+    ${jobTitle}
+    ${annualSal}
+   
     `); //values are assigned on lines 13-17
     $('#monthly').empty();
 
