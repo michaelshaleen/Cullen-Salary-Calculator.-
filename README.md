@@ -10,7 +10,13 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 
 ## TODO
 
-[]watch lecture/notes
-[]how to add more indexes to array
-[] add up all object.key(annualSalary)
+[x]watch lecture/notes
+[x]how to add more indexes to array
+[x] add up all object.key(annualSalary)
 [x]change ul to table
+[]make table of data look nice
+[] find ids of what I want to look nice
+[] maybe start with table and work to contents
+[] give padding/margin/ color to contents
+[] define flex container
+[] research flex box

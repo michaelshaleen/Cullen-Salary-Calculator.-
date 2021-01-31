@@ -11,6 +11,7 @@
   </head>
 
   <body>
+    <h3>Add Employees Here</h3>
     <form class="form" action="/action_page.php">
       <input placeholder="first Name" type="text" id="fname" name="fname" />
       <input placeholder="last name" type="text" id="lname" name="lname" />
@@ -21,16 +22,21 @@
         id="jobTitle"
         name="jobTitle"
       />
-      <input placeholder="annual salary" type="text" id="anSal" name="anSal" />
+      <input
+        placeholder="annual salary"
+        type="text"
+        id="annualSal"
+        name="annualSal"
+      />
       <input
         placeholder="button"
-        value="click me"
+        value="Submit"
         type="button"
         id="submitButton"
       />
     </form>
     <div>
-      <h2>Current Employees</h2>
+      <h2>List Of Current Employees</h2>
     </div>
     <!--<button onclick="collector()">Submit</button> -->
 
@@ -38,5 +44,11 @@
     <!-- love this onclick, may be an issue though
     add styling to table for thick borders and lines-->
     <div id="monthly"></div>
+    <h1>flex box work below</h1>
+    <div class="flex-container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
   </body>
 </html>

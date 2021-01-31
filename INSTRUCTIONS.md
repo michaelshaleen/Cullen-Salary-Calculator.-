@@ -15,6 +15,11 @@ A 'Submit' button should collect the form information, store the information to 
 
 <!--no button for it, but want it on the DOM,object.annualsalary, add up costs monthly costs,  -->
 
+[]if no adding do not append monthly
+[]find monthly
+[]find group that is not being appended
+[]where is append?
+[]where is if statement saying if/ else
 [x]add up salaries
 [x] monthly costs
 [x] total annual salary
@@ -29,9 +34,9 @@ A 'Submit' button should collect the form information, store the information to 
 [x] find where we can place the empty
 [x] getting so monthly clears and sums new total
 [x]label total salary
-[] monthly income shows up even when nothing is entered via inputs
-[] what's stopping other stuff from being added?
-[]where are the data from inputs?
+[x] monthly income shows up even when nothing is entered via inputs
+[x] what's stopping other stuff from being added?
+[x]where are the data from inputs?
 [x]append monthly
 [] grab variable names and reorganize
 [x] anSal / 12 = monthly costs
