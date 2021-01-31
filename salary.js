@@ -62,10 +62,8 @@ function collector() {
   <th> Employee ID: ${employeeID}</th>
   <th> Job Title: ${jobTitle}</th>
   <th> Annual Salary: ${annualSal}</th>
-  <th> Total Cost: ${total}</tr>
+  <th> Total Salary: ${total}</th>
   `);
-
-    //console.log(inputTotal[i] + inputTotal[i]);
   }
 }
 
@@ -74,10 +72,16 @@ function collector() {
 //}
 
 function monthlyCost() {
-  for (var i = 0; i < inputTotal.length; i++) {
+  total = 0;
+  let end = 0;
+  let months = 12;
+  for (let i = 0; i < inputTotal.length; i++) {
     total += inputTotal[i].annualSal;
-    console.log(total);
+    end = total / months;
+
+    console.log('total salary is: ', total);
+    console.log('end is :', end);
   }
-  return total;
 }
-//so far the best I can get
+
+//grab total and append to DOM
