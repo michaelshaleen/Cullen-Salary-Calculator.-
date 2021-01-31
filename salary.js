@@ -6,15 +6,17 @@ function starter() {
 let inputTotal = [];
 let total = 0;
 let end = 0;
+let maximum = 20000;
+let luca = $('#monthly');
 
 function collector() {
   //event.preventDefault();
-
   let lastName = $('#lname').val();
   let firstName = $('#fname').val();
   let employeeID = $('#idNum').val();
   let jobTitle = $('#jobTitle').val();
   let annualSal = $('#anSal').val();
+
   const inputField = {
     // creating object for input.val() to be stored in
     firstName: firstName,
@@ -25,23 +27,24 @@ function collector() {
   };
   if (
     //if any fields are empty give alert
-    !$('#fname').val() ||
+    !$('#fname').val() || //if this is empty OR
     !$('#lname').val() ||
     !$('#idNum').val() ||
     !$('#jobTitle').val() ||
     !$('#anSal').val()
   ) {
     let clearData = [
-      //clear inputs
+      //clear inputs after all submits
       $('#fname').val(''),
       $('#lname').val(''),
       $('#idNum').val(''),
       $('#jobTitle').val(''),
       $('#anSal').val(''),
+      $('#monthly').val(''),
     ];
     alert('you forgot something'); //alert if any field isn't filled
   } else {
-    // run when if statement not true, so all are filled
+    // run when if statement not true, so all are filled run this
 
     console.log('in collector'); //name of function
 
@@ -52,8 +55,10 @@ function collector() {
       $('#idNum').val(''),
       $('#jobTitle').val(''),
       $('#anSal').val(''),
-      $('#monthly').val(''),
     ];
+
+    $('#monthly').empty();
+
     inputTotal.push(inputField); // push the object outline into inputTotal
     console.log(inputTotal); // check if .push worked
     monthlyCost(); //run mC function
@@ -73,6 +78,9 @@ function collector() {
   `); // add table showing red background, not working
       //assign end to something that has a red background color
     } else {
+      if (end >= maximum) {
+        $('#monthly').css('background-color', 'red');
+      } // if over max limit turn red.
       // if < 20k do this
       $('#table').append(`
   <tr>
@@ -85,6 +93,7 @@ function collector() {
   `);
     }
   }
+
   $('#monthly').append(`Monthly Costs: ${end}`);
   console.log('Monthly Costs:', end);
 }
@@ -96,7 +105,6 @@ function monthlyCost() {
     end = total / 12;
 
     console.log('total salary is: ', total);
-    console.log('end is :', end);
   }
 }
 

@@ -18,8 +18,20 @@ A 'Submit' button should collect the form information, store the information to 
 [x]add up salaries
 [x] monthly costs
 [x] total annual salary
-[] getting so monthly clears and sums new total
+[x]where is monthly going?
+[x]get location of monthly and clear value
+[x] where will this color go? -- total monthly cost
+[x] get if x > 20k console.log
+[x] if statement form//form made , not working
+[x] where is total monthly cost? div
+[x] what is color id????
+[x]append css for redbackground
+[x] find where we can place the empty
+[x] getting so monthly clears and sums new total
 [x]label total salary
+[] monthly income shows up even when nothing is entered via inputs
+[] what's stopping other stuff from being added?
+[]where are the data from inputs?
 [x]append monthly
 [] grab variable names and reorganize
 [x] anSal / 12 = monthly costs
