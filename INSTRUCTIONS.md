@@ -16,10 +16,13 @@ A 'Submit' button should collect the form information, store the information to 
 <!--no button for it, but want it on the DOM,object.annualsalary, add up costs monthly costs,  -->
 
 [x]add up salaries
-[] monthly costs
-[] total annual salary
-[]label total salary
-[] anSal / 12 = monthly costs
+[x] monthly costs
+[x] total annual salary
+[] getting so monthly clears and sums new total
+[x]label total salary
+[x]append monthly
+[] grab variable names and reorganize
+[x] anSal / 12 = monthly costs
 Create a delete button that removes an employee from the DOM. For Base mode, it does **not** need to remove that Employee's salary from the reported total.
 
 ### Files Provided

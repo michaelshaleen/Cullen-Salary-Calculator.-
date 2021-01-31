@@ -5,6 +5,7 @@ function starter() {
 }
 let inputTotal = [];
 let total = 0;
+let end = 0;
 
 function collector() {
   //event.preventDefault();
@@ -40,22 +41,40 @@ function collector() {
     ];
     alert('you forgot something'); //alert if any field isn't filled
   } else {
-    // run when if statement not true
+    // run when if statement not true, so all are filled
 
-    console.log('in collector');
+    console.log('in collector'); //name of function
 
     let clearData = [
+      //empties the inputs
       $('#fname').val(''),
       $('#lname').val(''),
       $('#idNum').val(''),
       $('#jobTitle').val(''),
       $('#anSal').val(''),
+      $('#monthly').val(''),
     ];
     inputTotal.push(inputField); // push the object outline into inputTotal
-    console.log(inputTotal);
-    monthlyCost();
-
-    $('#table').append(`
+    console.log(inputTotal); // check if .push worked
+    monthlyCost(); //run mC function
+    let backgroundColor = (id = 'backgroundColor'); //assign for color change
+    if ((end > 20, 000)) {
+      // if total monthly cost is greater than 20k
+      end = backgroundColor; //becomes redbackground
+      $('#table').append(`
+  <tr>
+   <th> first name: ${firstName}</th>
+  <th> Last Name: ${lastName}</th>
+  <th> Employee ID: ${employeeID}</th>
+  <th> Job Title: ${jobTitle}</th>
+  <th> Annual Salary: ${annualSal}</th>
+  <th> Total Salary: ${total}</th>
+  <th id = "backgroundColor"> Monthly Costs: ${end}</th>
+  `); // add table showing red background, not working
+      //assign end to something that has a red background color
+    } else {
+      // if < 20k do this
+      $('#table').append(`
   <tr>
    <th> first name: ${firstName}</th>
   <th> Last Name: ${lastName}</th>
@@ -64,20 +83,17 @@ function collector() {
   <th> Annual Salary: ${annualSal}</th>
   <th> Total Salary: ${total}</th>
   `);
+    }
   }
+  $('#monthly').append(`Monthly Costs: ${end}`);
+  console.log('Monthly Costs:', end);
 }
-
-//function deleteButt() {
-//$(this).on('click');
-//}
-
 function monthlyCost() {
   total = 0;
-  let end = 0;
-  let months = 12;
+  end = 0;
   for (let i = 0; i < inputTotal.length; i++) {
     total += inputTotal[i].annualSal;
-    end = total / months;
+    end = total / 12;
 
     console.log('total salary is: ', total);
     console.log('end is :', end);
