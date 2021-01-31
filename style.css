@@ -1,39 +1,9 @@
-body {
-  background-color: rgb(40, 112, 44);
+#div,
+tr {
+  word-spacing: 50px;
+  border: solid;
+  column-gap: 5px;
 }
-
-#table {
-  width: 100%;
-  border-width: thick;
-  border-radius: 10px;
-  border-style: dotted;
-}
-
-#table,
-#th1,
-#th2,
-#th3,
-#th4,
-#th5,
-#th6 {
-  margin: 15px;
-  border-width: thin;
-  background-color: rgb(212, 230, 52);
-  border-style: solid;
-}
-#form,
-#fname,
-#lname,
-#idNum,
-#jobTitle,
-#annualSal {
-  margin: 8px;
-}
-
-.flex-container {
-  display: flex;
-  margin: 30px;
-}
-#monthly {
+#div {
   width: fit-content;
 }

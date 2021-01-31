@@ -5,8 +5,8 @@ function starter() {
 }
 let inputTotal = [];
 let total = 0;
-let monthlyBudget = 0;
-let maximum = 20000;
+let monthlyBudget = 0; //how much company spends on salaries, line 69
+let maximum = 20000; //the prompt gives a max of $20k for monthly costs, will be used on line 75
 
 function addEmployee() {
   //event.preventDefault();
@@ -52,13 +52,12 @@ function addEmployee() {
       $('#jobTitle').val(''),
       $('#annualSal').val(''),
     ];
-    $('#table').append(`
-    <tr>
-     <th> first name: ${firstName}</th>
-    <th> Last Name: ${lastName}</th>
-    <th> Employee ID: ${employeeID}</th>
-    <th> Job Title: ${jobTitle}</th>
-    <th> Annual Salary: ${annualSal}</th>
+    $('#div').append(`
+     <tr>${firstName}</tr>
+    <tr>${lastName}</tr>
+    <tr>${employeeID}</tr>
+    <tr>${jobTitle}</tr>
+    <tr>${annualSal}</tr>
     `); //values are assigned on lines 13-17
     $('#monthly').empty();
 

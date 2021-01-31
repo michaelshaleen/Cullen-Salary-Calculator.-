@@ -15,11 +15,17 @@ A 'Submit' button should collect the form information, store the information to 
 
 <!--no button for it, but want it on the DOM,object.annualsalary, add up costs monthly costs,  -->
 
+[]fix table
+[]make table look like wirefram
+[] wireframe has inputs at to[(name, id,$ etc)]
+
+[] make inputs inline with list
+[x] make input content, input content only
 []if no adding do not append monthly
-[]find monthly
-[]find group that is not being appended
-[]where is append?
-[]where is if statement saying if/ else
+[x]find monthly
+[x]find group that is not being appended
+[x]where is append?
+[x]where is if statement saying if/ else
 [x]add up salaries
 [x] monthly costs
 [x] total annual salary
