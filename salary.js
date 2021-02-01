@@ -8,7 +8,7 @@ let total = 0;
 let monthlyBudget = 0; //how much company spends on salaries, line 69
 let maximum = 20000; //the prompt gives a max of $20k for monthly costs, will be used on line 75
 
-function addEmployee() {
+function addEmployee(fname, lname, ID, Title, Salary) {
   //event.preventDefault();
   let lastName = $('#lname').val();
   let firstName = $('#fname').val();
@@ -52,47 +52,56 @@ function addEmployee() {
       $('#jobTitle').val(''),
       $('#annualSal').val(''),
     ];
-    $('#monthly').append(`
-    ${firstName}
-    ${lastName}
-    ${employeeID}
-    ${jobTitle}
-    ${annualSal}
-   
-    `); //values are assigned on lines 13-17
-    $('#monthly').empty();
+    $('#here').append(` 
+    <table>
+     <tr>
+      <th>First</th>
+      <th>Last</th>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Salary</th>
+      </tr>
+      <tr>
+      <td>${firstName}</td>
+      <td>${lastName}</td>
+      <td>${employeeID}</td>
+      <td>${jobTitle}</td>
+      <td>${annualSal}</td>
+      </tr>
+      </table>
+      <button class= "deleteBut">Delete Me</button>
+    </tr>
+  </table>
+    </li>`);
+    //values are assigned on lines 13-17
 
     inputTotal.push(inputField); // push the object outline into inputTotal
     console.log(inputTotal); // check if .push worked
     monthlyCost(); //run mC function
     let backgroundColor = (id = 'backgroundColor'); //assign for color change
-    if ((monthlyBudget > 20, 000)) {
-      // if total monthly cost is greater than 20k
-      monthlyBudget = backgroundColor; //becomes redbackground
-      // add table showing red background, not working
-      //assign monthlyBudget to something that has a red background color
-    } else {
-      if (monthlyBudget >= maximum) {
-        alert('Total Monthly Costs Exceed $20k');
-        $('#monthly').css('background-color', 'red');
-      } // if over max limit turn red.
-      // if < 20k do this
-    }
   }
 
   $('#monthly').append(`Monthly Costs: $${monthlyBudget}`); //show on DOM from monthlyCost function
-  console.log('Monthly Costs:', monthlyBudget); // show it works
-}
-function monthlyCost() {
-  total = 0;
-  monthlyBudget = 0;
-  for (let i = 0; i < inputTotal.length; i++) {
-    total += inputTotal[i].annualSal;
-    monthlyBudget = total / 12;
+  console.log('Monthly Costs:', monthlyBudget);
+  $();
 
-    console.log('total salary is: ', total);
+  if (monthlyBudget >= maximum) {
+    alert('Total Monthly Costs Exceed $20k');
+    $('#monthly').css('background-color', 'red'); // at least this works!
+  } // if over max limit turn red.
+  // if < 20k do this// show it works
+  function monthlyCost() {
+    total = 0;
+    monthlyBudget = 0;
+    for (let i = 0; i < inputTotal.length; i++) {
+      total += inputTotal[i].annualSal;
+      monthlyBudget = total / 12;
+      console.log('monthly budget is : ', monthlyBudget);
+    }
   }
-} // this function is used to find the total monthly cost by grabbing total
-// annual salaries added and /12 to find the month.
+  return true; // this function is used to find the total monthly cost by grabbing total
+  // annual salaries added and /12 to find the month.
+}
 
-//grab total and append to DOM
+//console.log(addEmployee('Bob', 'Anderson', 4, 'Head of Marketing', 50000));
+//line 106 causes errors, reads alert.

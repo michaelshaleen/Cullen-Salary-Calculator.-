@@ -11,3 +11,7 @@ tr {
 th {
   word-spacing: 50px;
 }
+#monthly {
+  display: inline;
+  max-width: min-content;
+}

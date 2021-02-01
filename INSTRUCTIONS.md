@@ -15,37 +15,6 @@ A 'Submit' button should collect the form information, store the information to 
 
 <!--no button for it, but want it on the DOM,object.annualsalary, add up costs monthly costs,  -->
 
-[]fix table
-[]make table look like wirefram
-[] wireframe has inputs at to[(name, id,$ etc)]
-
-[] make inputs inline with list
-[x] make input content, input content only
-[]if no adding do not append monthly
-[x]find monthly
-[x]find group that is not being appended
-[x]where is append?
-[x]where is if statement saying if/ else
-[x]add up salaries
-[x] monthly costs
-[x] total annual salary
-[x]where is monthly going?
-[x]get location of monthly and clear value
-[x] where will this color go? -- total monthly cost
-[x] get if x > 20k console.log
-[x] if statement form//form made , not working
-[x] where is total monthly cost? div
-[x] what is color id????
-[x]append css for redbackground
-[x] find where we can place the empty
-[x] getting so monthly clears and sums new total
-[x]label total salary
-[x] monthly income shows up even when nothing is entered via inputs
-[x] what's stopping other stuff from being added?
-[x]where are the data from inputs?
-[x]append monthly
-[] grab variable names and reorganize
-[x] anSal / 12 = monthly costs
 Create a delete button that removes an employee from the DOM. For Base mode, it does **not** need to remove that Employee's salary from the reported total.
 
 ### Files Provided
